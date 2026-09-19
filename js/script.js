@@ -125,3 +125,31 @@ if (contactForm && formMessage) {
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
+
+
+// Reveal selected content as it enters the viewport
+const revealItems = document.querySelectorAll(
+  ".section-heading, .info-card, .skill-card, .project-card, .research-card, .contact-form"
+);
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!reduceMotion && "IntersectionObserver" in window) {
+  revealItems.forEach((item) => item.classList.add("reveal-item"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
