@@ -101,8 +101,21 @@ if (contactForm && formMessage) {
       return;
     }
 
+    const emailSubject = encodeURIComponent(subject);
+    const emailBody = encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n\n" +
+      message
+    );
+
     formMessage.textContent =
-      "Thank you! The form has been validated successfully.";
+      "Opening your email app with the message ready to send...";
+
+    window.location.href =
+      "mailto:jannattrisha018@gmail.com?subject=" +
+      emailSubject +
+      "&body=" +
+      emailBody;
 
     contactForm.reset();
   });
