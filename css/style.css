@@ -250,30 +250,21 @@ button {
 }
 
 .hero-image {
-  width: min(100%, 380px);
-  min-height: 320px;
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
   margin-left: auto;
-  display: flex;
-  align-items: center;
   border-radius: 28px;
   overflow: hidden;
-  background: linear-gradient(145deg, var(--surface), var(--surface-soft));
+  background: var(--surface-soft);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
-.hero-image .project-content {
-  padding: 34px;
-}
-
-.hero-image .project-content h3 {
-  font-size: 1.65rem;
-  margin: 10px 0 16px;
-}
-
-.hero-image .project-content p {
-  margin: 0;
-  line-height: 2;
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
 }
 
 /* About */
@@ -568,8 +559,7 @@ a.project-link:hover {
 
   .hero-image {
     margin: 20px auto 0;
-    width: min(100%, 520px);
-    min-height: auto;
+    width: min(78%, 340px);
   }
 
   .skills-grid {
@@ -639,10 +629,6 @@ a.project-link:hover {
     width: 100%;
   }
 
-  .hero-image .project-content {
-    padding: 26px;
-  }
-
   .navbar {
     gap: 12px;
   }
@@ -662,4 +648,16 @@ a.project-link:hover {
     flex-direction: column;
     text-align: center;
   }
+}
+
+
+.contact-item a {
+  color: var(--primary);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
