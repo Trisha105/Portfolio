@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-trisha-0ca7.vercel.app/sitemap.xml
