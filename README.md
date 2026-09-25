@@ -2,7 +2,21 @@
 
 A responsive personal portfolio showcasing my software projects, research interests, technical skills, and academic background. Built as part of the **CSE 471 Web and Internet Programming** coursework at Southeast University.
 
-**[View the live portfolio](https://portfolio-trisha-0ca7.vercel.app)**
+**Live site:** [portfolio-trisha-0ca7.vercel.app](https://portfolio-trisha-0ca7.vercel.app)
+
+## Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Built With](#built-with)
+- [Run Locally](#run-locally)
+- [Project Structure](#project-structure)
+- [Featured Work](#featured-work)
+- [Portfolio Sections](#portfolio-sections)
+- [Contact Form](#contact-form)
+- [Deployment](#deployment)
+- [Author](#author)
+- [Coursework](#coursework)
 
 ## Overview
 
@@ -68,9 +82,23 @@ Portfolio/
 
 Visit the [Projects section](https://portfolio-trisha-0ca7.vercel.app/#projects) for descriptions and available repository links. The portfolio also includes research-oriented work on leukemia screening, obesity risk classification, life expectancy prediction, and cancer risk prediction.
 
+## Portfolio Sections
+
+| Section | What visitors can find |
+| --- | --- |
+| Home | Introduction and quick links to projects and contact |
+| About & Skills | Background, interests, and technical skills |
+| Projects | Software, web, and robotics work |
+| Research | Current research-oriented topics |
+| Education & Contact | Academic background and contact options |
+
 ## Contact Form
 
 The form validates the fields in the browser and prepares a `mailto:` link. Submitting opens the visitor's configured email app with the message filled in; the website itself does not send or store messages.
+
+## Deployment
+
+The site is hosted on Vercel. As a static website, it can also be deployed to any host that serves HTML, CSS, JavaScript, and image files. Keep the repository structure intact so the relative asset paths continue to work. The live URL is linked above.
 
 ## Author
 
