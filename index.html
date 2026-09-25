@@ -448,7 +448,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" aria-describedby="formHelp formMessage">
 
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -490,8 +490,12 @@
                                 required></textarea>
                         </div>
 
+                        <p class="form-help" id="formHelp">
+                            This opens your email app with the message ready to review and send.
+                        </p>
+
                         <button type="submit" class="btn primary-btn">
-                            Send Message
+                            Open Email App
                         </button>
 
                         <p

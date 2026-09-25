@@ -127,7 +127,7 @@ if (contactForm && formMessage) {
     );
 
     formMessage.textContent =
-      "Opening your email app with the message ready to send...";
+      "Your email app is opening with the message ready to review and send.";
 
     window.location.href =
       "mailto:jannattrisha018@gmail.com?subject=" +
@@ -135,7 +135,6 @@ if (contactForm && formMessage) {
       "&body=" +
       emailBody;
 
-    contactForm.reset();
   });
 }
 

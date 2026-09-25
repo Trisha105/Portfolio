@@ -597,6 +597,12 @@ a.project-link:hover {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
 }
 
+.form-help {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: -2px 0 18px;
+}
+
 .form-message {
   min-height: 1.7em;
   margin-top: 14px;
