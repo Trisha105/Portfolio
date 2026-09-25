@@ -48,9 +48,15 @@ if (savedTheme === "dark") {
 
 function updateThemeIcon() {
   if (!themeToggle) return;
-  themeToggle.textContent = document.body.classList.contains("dark-theme")
-    ? "☀️"
-    : "🌙";
+
+  const isDarkTheme = document.body.classList.contains("dark-theme");
+
+  themeToggle.textContent = isDarkTheme ? "☀️" : "🌙";
+  themeToggle.setAttribute("aria-pressed", String(isDarkTheme));
+  themeToggle.setAttribute(
+    "aria-label",
+    isDarkTheme ? "Switch to light mode" : "Switch to dark mode"
+  );
 }
 
 updateThemeIcon();
