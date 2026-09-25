@@ -31,6 +31,8 @@ The site brings my work into one place, from web development and Java applicatio
 - Dedicated research, skills, education, and contact sections
 - Contact form with client-side validation that opens the visitor's email app
 - Motion-aware reveal effects that respect reduced-motion preferences
+- Keyboard-friendly navigation with a skip link, visible focus, and Escape-key menu closing
+- Canonical metadata, structured profile data, and search crawler configuration
 
 ## Built With
 
@@ -70,6 +72,8 @@ Portfolio/
 │   └── images/
 │       ├── profile.jpeg      # Photo displayed on the site
 │       └── profile.webp
+├── robots.txt                # Search crawler rules
+├── sitemap.xml               # Public site URL for search crawlers
 └── README.md
 ```
 
@@ -81,6 +85,10 @@ Portfolio/
 - **Competition Fast Line Follower Robot:** Ongoing sensor-based robotics and PID control project.
 
 Visit the [Projects section](https://portfolio-trisha-0ca7.vercel.app/#projects) for descriptions and available repository links. The portfolio also includes research-oriented work on leukemia screening, obesity risk classification, life expectancy prediction, and cancer risk prediction.
+
+## Quality and Accessibility
+
+The site uses semantic HTML and labelled form controls. It supports keyboard navigation, provides a visible focus state, lets keyboard users skip directly to the page content, and respects the operating system's reduced-motion setting. The primary navigation also announces its current section and can be closed with the Escape key on smaller screens.
 
 ## Portfolio Sections
 
