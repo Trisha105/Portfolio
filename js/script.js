@@ -11,18 +11,31 @@ const currentYear = document.getElementById("currentYear");
 
 // Mobile navigation
 if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
+  function setMenuState(isOpen) {
+    navLinks.classList.toggle("open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
     menuToggle.textContent = isOpen ? "✕" : "☰";
+  }
+
+  menuToggle.addEventListener("click", () => {
+    setMenuState(!navLinks.classList.contains("open"));
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.textContent = "☰";
+      setMenuState(false);
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("open")) {
+      setMenuState(false);
+      menuToggle.focus();
+    }
   });
 }
 
@@ -69,10 +82,15 @@ function setActiveLink() {
   });
 
   navAnchors.forEach((link) => {
-    link.classList.toggle(
-      "active",
-      link.getAttribute("href") === "#" + currentSection
-    );
+    const isCurrent = link.getAttribute("href") === "#" + currentSection;
+
+    link.classList.toggle("active", isCurrent);
+
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 }
 
